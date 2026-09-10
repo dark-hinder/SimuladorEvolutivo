@@ -1,5 +1,6 @@
 import pygame
 from organismo import Organismo
+from ambiente import Ambiente
 import random
 
 pygame.init()
@@ -8,37 +9,49 @@ largura = 700
 altura = 700
 
 
+
 organismoLista = []
-for i in range(12):
-    def aletorio():
-        return random.randint(0,255)
-    rgb = [aletorio(),aletorio(),aletorio()]
-    latX = random.randint(0,800)
-    latY = random.randint(0,800)
-    organismo = Organismo(latX, latY, rgb)
-    organismoLista.append(organismo)
+
+def gerar(number):
+    for i in range(number):
+        def aletorio():
+            return random.randint(0,255)
+        rgb = [aletorio(),aletorio(),aletorio()]
+        latX = random.randint(0,679)
+        latY = random.randint(0,679)
+        organismo = Organismo(latX, latY, rgb)
+        organismoLista.append(organismo)
+
+
+gerar(12)
 
 janela = pygame.display.set_mode([largura,altura])
 pygame.display.set_caption("Evolução")
 
+fundo = Ambiente()
+
 clock = pygame.time.Clock()
 executando = True
+
+reproducao = False
+
 while executando:
-    
+    if reproducao == True:
+        gerar(1)
     eventos = pygame.event.get()
     for evento in eventos:
         if evento.type == pygame.QUIT:
             executando = False
-    pygame.draw.rect(janela, (255, 69, 0), (0, 0, 350, 350))
-    pygame.draw.rect(janela, (250, 250, 0), (350, 0, 350, 350))
-    pygame.draw.rect(janela, (24, 116, 205), (0, 350, 350, 350))
-    pygame.draw.rect(janela, (102, 205, 0), (350, 350, 350, 350))
+
     
     
-    for i in range(12):
+    fundo.desenhar(janela)
+    
+    for i in range(len(organismoLista)):
         organismoLista[i].desenhar(janela)
     
     pygame.display.update()
     clock.tick(30)
 
 pygame.quit()
+
