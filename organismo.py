@@ -6,8 +6,8 @@ class Organismo:
         self.y = y
         self.cor = (rgb[0], rgb[1], rgb[2])
 
-        self.largura = 20
-        self.altura = 20
+        self.largura = 25
+        self.altura = 25
         
     def desenhar(self, janela):
         pygame.draw.rect(janela,self.cor, (self.x, self.y, self.largura, self.altura))
