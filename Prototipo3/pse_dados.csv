@@ -1,0 +1,6 @@
+tempo_s,tipo,detalhe,resultado,acerto,nivel,integridade,recursos
+23,dna_mutation,idx=6;resp=0,erro,0,1,100,100
+40,dna_start,idx=11;resp=3,erro,0,1,100,100
+55,dna_complement,seq=TTCTCGGA;resp=AAGAGCCT,acerto,1,1,100,100
+80,codon_translate,codon=CCC;resp=0,erro,0,1,100,100
+81,codon_mutation,codon=CAA;resp=1,erro,0,1,100,100
