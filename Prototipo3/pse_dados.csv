@@ -4,3 +4,14 @@ tempo_s,tipo,detalhe,resultado,acerto,nivel,integridade,recursos
 55,dna_complement,seq=TTCTCGGA;resp=AAGAGCCT,acerto,1,1,100,100
 80,codon_translate,codon=CCC;resp=0,erro,0,1,100,100
 81,codon_mutation,codon=CAA;resp=1,erro,0,1,100,100
+31,dna_complement,seq=GTGGCTTT;resp=CACCGAAA,acerto,1,1,100,100
+40,dna_mutation,idx=3;resp=3,acerto,1,1,100,100
+53,dna_start,idx=4;resp=4,acerto,1,1,100,100
+103,codon_translate,codon=ATG;resp=2,erro,0,2,100,100
+115,codon_mutation,codon=TAT;resp=1,erro,0,2,100,100
+116,codon_translate,codon=TGA;resp=2,erro,0,2,100,100
+117,codon_mutation,codon=GTT;resp=1,acerto,1,2,100,100
+128,codon_translate,codon=GGG;resp=1,erro,0,2,100,100
+129,codon_mutation,codon=ATC;resp=1,acerto,1,2,100,100
+129,codon_translate,codon=TAG;resp=1,erro,0,2,100,100
+130,codon_mutation,codon=GGA;resp=1,acerto,1,2,100,100
